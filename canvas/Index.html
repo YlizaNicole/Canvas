@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sample arcs example</title>
+  <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>ABS-CBN</title>
+	<link rel="icon" type="image" href="logo.png">
+	<style type="text/css">
+		@import url('https://fonts.googleapis.com/css2?family=Chonburi&display=swap');
+		body {
+			margin: 0;
+			padding: 0;
+      background:linear-gradient(#228B22,#ffffff);
+		}
+		#circle {
+			margin-top: 4rem;
+      background-color: #ffffff;
+			
+		}
+		.container {
+			text-align: center;
+			box-sizing: border-box;
+			height: 100vh;
+      
+		}
+		h1 {
+			color: #000000;
+			font-size: 6rem;
+			margin: 0 0 0 0;
+			font-family: 'Chonburi', cursive;
+		}
+	</style>
+</head>
+<body onload="draw();">
+  <div class="container">
+    <canvas id="circle" width="450px" height="450px"></canvas> 
+    <h1>ABS-CBN</h1>
+  </div>
+<script type="text/javascript">
+    
+  let cvs = document.getElementById("circle");
+  let ctx = cvs.getContext("2d");
+
+  ctx.beginPath();
+  ctx.strokeStyle = "#FF0000";
+  X = 225
+  Y = 225
+  R = 192
+  ctx.lineWidth = 35;
+  ctx.arc(X, Y, R, 0, 2 * Math.PI);
+  ctx.stroke();
+  
+  ctx.beginPath();
+  ctx.strokeStyle = "#228B22";
+  X = 225
+  Y = 225
+  R = 128
+  ctx.lineWidth = 35;
+  ctx.arc(X, Y, R, 0, 2 * Math.PI);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.strokeStyle = " #0047AB";
+  X = 225
+  Y = 225
+  R = 64
+  ctx.lineWidth = 35;
+  ctx.arc(X, Y, R, 0, 2 * Math.PI);
+  ctx.stroke();
+
+  ctx.fillStyle = "#ffffff";
+  X = 200
+  Y = 225
+  R = 50
+  ctx.fillRect(X, Y, R, 225);
+
+  ctx.fillStyle = "#000000";
+  X = 210
+  Y = 225
+  R = 30
+  ctx.fillRect(X, Y, R, 220);
+</script>
+</body> 
+</html>
